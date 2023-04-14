@@ -280,11 +280,10 @@ h1,
     justify-content: space-between;
 }
 
-/******************************** Sections welcome ***************************************************/
-#welcomeVideo {
-    display: flex;
-    margin: auto;
-
+/******************************** Section welcome ***************************************************/
+#welcome video {
+    width: auto;
+    height: auto;
 }
 
 
@@ -398,6 +397,15 @@ h1,
 
 #dateInput ::placeholder {
     text-align: center;
+    color: white;
+}
+
+.detail {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.detail p {
     color: white;
 }
 
