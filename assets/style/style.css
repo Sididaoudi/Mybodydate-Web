@@ -7,21 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 
-/**************** Welcome Page ********************************/
-/* 
-#welcome {
-    display: flex;
-} */
-
-#welcome img {
-    background: url(/assets/img/logo.png);
-    height: 80px;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-}
-
 
 /**************** Header ********************************/
 header {
@@ -108,6 +93,7 @@ h4 {
 
 .emailParagraphe {
     color: white;
+
 }
 
 #login {
@@ -152,10 +138,22 @@ h4 {
     border: none;
     margin-top: 50px;
     margin: 0 auto;
+    font-weight: bold;
 }
 
 .continueBtn a {
     text-decoration: none;
+}
+
+.otherEmail {
+    background: black;
+    width: 250px;
+    height: 50px;
+    color: white;
+    border-radius: 25px;
+    margin-top: 120px;
+    margin: 50px auto;
+    margin-bottom: 230px;
 }
 
 #refuseBtn,
@@ -197,9 +195,9 @@ h4 {
     border-radius: 40px;
     height: 100px;
     width: 300px;
-    background: transparent;
+    background: white;
     border: 1px solid blue;
-    color: white;
+    color: blue;
 }
 
 .womanBtn:focus {
@@ -240,6 +238,21 @@ h4 {
     color: white;
 }
 
+.valideBtn {
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    width: 250px;
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    color: blue;
+    border: none;
+    margin-top: 50px;
+    margin: 0 auto;
+    text-decoration: none;
+}
 
 /************************** Logo img ********************************/
 .logo img {
@@ -341,11 +354,15 @@ h1,
     width: 25%;
     background: transparent;
     border: 1px solid white;
+    text-align: center;
+    color: white;
 }
 
 .emailInput:focus {
     border-color: white;
     outline-color: white;
+    text-align: center;
+    color: white;
 }
 
 #email ::placeholder {
@@ -359,14 +376,17 @@ h1,
 
 
 
+
 .townInput {
-    border-radius: 10px;
+    border-radius: 50px;
     display: block;
     margin: 50px auto;
     height: 100px;
     width: 25%;
     background: transparent;
     border: 1px solid white;
+    text-align: center;
+    color: white;
 }
 
 
@@ -380,6 +400,7 @@ h1,
     color: white;
 }
 
+
 .dateInput {
     border-radius: 10px;
     display: block;
@@ -388,16 +409,29 @@ h1,
     width: 25%;
     background: transparent;
     border: 1px solid white;
+    text-align: center;
+    color: white;
 }
 
 .dateInput:focus {
     border-color: white;
     outline-color: white;
+    text-align: center;
+    color: white;
 }
 
 #dateInput ::placeholder {
     text-align: center;
     color: white;
+}
+
+#sizeSelect {
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    height: 90px;
+    width: 25%;
+    text-align: center;
 }
 
 .detail {
@@ -408,6 +442,99 @@ h1,
 .detail p {
     color: white;
 }
+
+.firstNameInput {
+    border-radius: 50px;
+    display: block;
+    margin: 50px auto;
+    height: 100px;
+    background: transparent;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    margin-bottom: 350px;
+}
+
+.firstNameInput:focus {
+    border-color: white;
+    outline-color: white;
+    text-align: center;
+    color: white;
+}
+
+#firstNameInput ::placeholder {
+    text-align: center;
+    color: white;
+}
+
+.premiumCard {
+    background: black;
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    height: 100px;
+    margin-bottom: 250px;
+    width: 50%;
+}
+
+.email {
+    border-radius: 25px;
+    width: 50%;
+    height: 60px;
+    margin: 50px auto;
+    background: transparent;
+    border: 1px solid white;
+}
+
+.email:focus {
+    border-color: white;
+    outline-color: white;
+}
+
+#myAccount button.email::placeholder {
+    text-align: center;
+    color: white;
+}
+
+.email ::placeholder {
+    text-align: center;
+    color: white;
+}
+
+.passwordInput {
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    height: 100px;
+    width: 25%;
+    background: transparent;
+    border: 1px solid white;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus {
+    text-align: center;
+    color: white;
+}
+
+/****************************** Login Page ****************************/
+
 
 /**************************** Events ********************************/
 

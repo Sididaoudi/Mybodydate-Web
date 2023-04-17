@@ -56,10 +56,12 @@
                                 Télécharger notre application
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="https://play.google.com/store/apps?hl=fr">Google
+                                <li><a class="dropdown-item" href="https://play.google.com/store/apps?hl=fr"
+                                        target="_blank">Google
                                         play</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Apple store</a></li>
+                                <li><a class="dropdown-item" href="https://www.apple.com/fr/store" target="_blank">Apple
+                                        store</a></li>
                             </ul>
                         </li>
                         </li>
@@ -79,29 +81,33 @@
     </header>
 
 
-
     <main>
 
         <section id="email" class="sectionBackgroundPink">
             <h2 class="title2">S'inscrire</h2>
-            <input type="email" class="emailInput" placeholder="Entrez votre Email">
+            <input type="email" class="emailInput" placeholder="Entrez votre Email" id="emailInput">
             <p class="emailParagraphe">Un lien pour vous connecter à votre ancien compte, va vous être envoyé par
                 e-mail.</p>
             <div class="contentBtn">
-                <button class="continueBtn"><a href="#confirmEmail">Continuer</a></button>
+                <button class="continueBtn" onclick="return validateEmail();"><a
+                        href="#confirmEmail">Continuer</a></button>
+
             </div>
         </section>
 
 
         <section id="confirmEmail" class="sectionBackgroundPink">
             <h2 class="title2">Confirmation E-mail</h2>
-            <div class="contentBtn">
+            <p class="emailParagraphe">Si vous n'avez pas reçu d'email, consultez vos spams, ou réessayez.</p>
+            <button class="otherEmail"><i class="fa-solid fa-envelope"></i>Utiliser un autre e-mail</button>
+            <p class="emailParagraphe">Utiliser un autre moyen de connexion</p>
+            <div class=" contentBtn">
                 <button class="continueBtn"><a href="#town">Continuer</a></button>
             </div>
         </section>
 
         <section id="town" class="sectionBackgroundPink">
-            <h2 class="title2">Votre ville</h2>
+            <h2 class="title2">Votre ville ?</h2>
             <input type="text" class="townInput" placeholder="Entrez votre ville">
             <div class="contentBtn">
                 <button class="continueBtn"><a href="#kind">Continuer</a></button>
@@ -130,7 +136,9 @@
 
         <section id="size" class="sectionBackgroundPink">
             <h2 class="title2">Votre Taille ?</h2>
-
+            <select id="sizeSelect" class="form-select" aria-label="Default select example">
+                <option selected>Sélectionnez votre taille</option>
+            </select>
             <div class="contentBtn">
                 <button class="continueBtn"><a href="#currentSituation">Continuer</a></button>
             </div>
@@ -245,26 +253,46 @@
                     recherche car votre ID reste unique ! C'est déjà un excellent départ.
                 </p>
             </div>
-            <input type="text" class="emailInput" placeholder="Votre Prénom">
+            <input type="text" class="firstNameInput" placeholder="Votre Prénom">
             <div class="contentBtn">
-                <button class="continueBtn"><a href="premiumSubscription">Continuer</a></button>
+                <button class="continueBtn"><a href="#premiumSubscription">Continuer</a></button>
             </div>
         </section>
 
         <section id="premiumSubscription" class="sectionBackgroundPink">
             <h2 class="title2">Abonnement premium</h2>
+            <input type="text" class="firstNameInput" placeholder="Votre Prénom">
             <div class="detail">
-                <p>Grâce à l'abonnement, obtenez notre carte de visite avec votre numéro d'identification.
+                <p class="emailParagraphe">Grâce à l'abonnement, obtenez notre carte de visite avec votre numéro
+                    d'identification.
                     Donnez cette carte à un.e inconnu.e dans la rue pour qu'il vous retrouve sur notre application.
                 </p>
+                <div class="premiumCard"></div>
             </div>
             <div class="contentBtn">
-                <button class="continueBtn"><a href="#email">Continuer</a></button>
+                <button class="continueBtn"><a href="#myAccount">Continuer</a></button>
             </div>
         </section>
 
+        <section id="myAccount" class="sectionBackgroundPink">
+            <h2 class="title2">Mon compte</h2>
 
+            <input type="email" class="emailInput" placeholder="Votre Email" id="emailInput">
+            <p class="emailParagraphe">Allez dans votre boite de messagerie pour confirmer votre email.</p>
 
+            <input type="password" class="passwordInput" placeholder="Mot de passe" id="passwordInput">
+            <p class="emailParagraphe">Pour garantir la sécurité de votre compte, votre mot de passe doit contenir :
+                - Au moins une lettre majuscule
+                - Au moins une lettre minuscule
+                - Au moins un chiffre
+                - Au moins un caractètre spéciale (&#@%?!)
+                - Au moins huit (8) caractères
+            </p>
+            <div class="contentBtn">
+                <button class="valideBtn"><a href="#email">Valider</a></button>
+
+            </div>
+        </section>
 
     </main>
 
@@ -337,6 +365,9 @@
 
     </footer>
 
+    <script src="/script/script.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
@@ -345,9 +376,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
-
-
-    <script src="/script/script.js"></script>
 
 
 </body>
