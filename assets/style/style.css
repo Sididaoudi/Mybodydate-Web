@@ -1,6 +1,7 @@
-/************ Réglagles globaux ****************/
-
-
+/******************* Globals ****************/
+* {
+    scroll-behavior: smooth;
+}
 
 /**************** Police ********************************/
 
@@ -145,6 +146,21 @@ h4 {
     text-decoration: none;
 }
 
+.radio-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 220px;
+    padding-left: 30px;
+}
+
+.radio-buttons label {
+    color: white;
+}
+
+.radio-buttons input[type="radio"]+label {
+    margin-left: 10px;
+}
+
 .otherEmail {
     background: black;
     width: 250px;
@@ -254,6 +270,23 @@ h4 {
     text-decoration: none;
 }
 
+#accept {
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: blue;
+    display: block;
+    margin: 50px auto;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
 /************************** Logo img ********************************/
 .logo img {
     width: 30%;
@@ -293,9 +326,18 @@ h1,
     justify-content: space-between;
 }
 
+
+
+
 /******************************** Section welcome ***************************************************/
-#welcome video {
-    width: auto;
+#welcomePage .videoContainer {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#welcomePage video {
+    width: 100%;
     height: auto;
 }
 
@@ -303,22 +345,22 @@ h1,
 /************************** Section credit ***************************************/
 
 #credit {
-    max-width: 300px;
-    margin: 0 auto;
+    margin-top: 20px;
+    height: 100%;
 }
 
-#credit video {
-    width: 100%;
-    height: auto;
+#creditVideo {
+
+    width: 50%;
 }
 
 /************************** Section consent ***************************************/
 #consent {
-    margin-top: 40px;
+    margin-top: 100px;
     border-radius: 30px;
     background: rgb(255, 255, 255);
     width: 50%;
-    height: 400px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -342,6 +384,9 @@ h1,
 
 
 /************************** Section Love Coach ***************************************/
+#loveCoach {
+    margin-top: 120px;
+}
 
 /**************************** Registration Form ********************************/
 
@@ -501,6 +546,8 @@ h1,
     color: white;
 }
 
+
+
 .passwordInput {
     border-radius: 10px;
     display: block;
@@ -509,6 +556,13 @@ h1,
     width: 25%;
     background: transparent;
     border: 1px solid white;
+}
+
+#avatar {
+    display: block;
+    margin: 50px auto;
+    cursor: pointer;
+
 }
 
 
@@ -533,12 +587,109 @@ input[type="text"]:focus {
     color: white;
 }
 
-/****************************** Login Page ****************************/
 
+.description {
+    text-align: center;
+    color: white;
+}
+
+
+/******************************** Login page ********************************* */
+
+
+input[type="password"] {
+    border: 1px solid white;
+}
+
+/****************************** Profil ****************************/
+
+#profil {
+    height: 100%;
+}
+
+.cardProfil {
+    margin: 50px auto;
+    display: block;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.cardProfil img {
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+    border-radius: 50%;
+}
+
+
+.edit {
+    border-radius: 25px;
+    width: 10%;
+    display: block;
+    background: blue;
+    color: white;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+#likes {
+    border: 1px solid red;
+    background: white;
+    text-align: center;
+    width: 80%;
+}
+
+.chatbox {
+    border-radius: 25px;
+    width: 10%;
+    display: block;
+    background: white;
+    height: 100%;
+}
+
+/* 
+#chat {
+    width: 100%;
+    height: 100px;
+} */
+
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(252, 203, 144, 1), rgba(213, 126, 235, 1))
+}
+
+.mask-custom {
+    background: rgba(24, 24, 16, .2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
 
 /**************************** Events ********************************/
+#eventsCards {
+    z-index: 1;
+}
 
-#ourEvents {
+.row {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    /* padding: 60px; */
+}
+
+.col-lg-4 {
+    margin-top: 20px;
+}
+
+/* #ourEvents {
     background: url(/assets/img/bg.jpg);
     background-size: 100%;
     margin-top: 150px;
@@ -614,16 +765,161 @@ img {
 .card:focus::before,
 .card:focus::after {
     transform: scale3d(1, 1, 1);
+} */
+
+
+/******************************** Team ********************************/
+.container {
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    background: url(/assets/img/bg.jpg);
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+    margin: 5% 0;
+}
+
+.card {
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(227, 235, 246, 0.3);
+    border-radius: 30px;
+    text-align: center;
 }
 
 
-/******************************** Teams ********************************/
+.card_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.card_body {
+    padding: 26px 10px 36px 10px;
+}
+
+.card_title {
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #25262C;
+    font-size: 32px;
+    padding-bottom: 15px;
+}
+
+.designation {
+    font-weight: 700;
+    font-size: 22px;
+    color: #959EAF;
+}
+
+.call_btn {
+    margin: 140px 0 40px;
+    position: relative;
+    display: inline-block;
+    z-index: 99;
+}
+
+
+
+.btn_icon i {
+    position: relative;
+    font-size: 22px;
+    color: #1F83FE;
+    transition: all .3s ease-in-out;
+}
+
+.btn_icon i:after {
+    content: '';
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    left: -17px;
+    top: -18px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+
+.btn_icon:hover i {
+    color: #0050B1;
+}
+
+
+.btn_icon:hover .circle {
+    box-shadow: 0px 4px 97px rgba(44, 134, 255, 0.8);
+}
+
+.link {
+    position: fixed;
+    background-color: #D12322;
+    padding: 23px 40px;
+    right: -110px;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .1s ease-in-out;
+}
+
+.link i {
+    padding-left: 7px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: black;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2%;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card_title {
+        font-size: 26px;
+    }
+
+    .designation {
+        font-size: 18px;
+    }
+
+    .call_btn {
+        margin: 100px 0 25px;
+    }
+}
 
 
 /************************** Footer ********************************/
 footer {
     position: fixed;
-    bottom: -30rem;
+    bottom: -40rem;
     width: 100%;
 }
 

@@ -1,13 +1,12 @@
-/* Credit animation */
+/* video welcome page */
 
-// const playButton = document.getElementById('play-button');
-// const creditVideo = document.getElementById('credit-video');
+const playButton = document.getElementById('play-button');
+const creditVideo = document.getElementById('credit-video');
 
-// playButton.addEventListener('click', function () {
-//     creditVideo.play();
-// });
+playButton.addEventListener('click', function () {
+    creditVideo.play();
+});
 
-/* Logo animation */
 
 
 /* Email format Validation */
@@ -33,29 +32,11 @@ for (let i = 140; i <= 230; i++) {
     sizeSelect.appendChild(option);
 }
 
-/* Captcha */
+/* first name */
 
-var captcha = {
-    generateCode: function () {
-        var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var code = "";
-        for (var i = 0; i < 6; i++) {
-            var rand = Math.floor(Math.random() * chars.length);
-            code += chars[rand];
-        }
-        return code;
-    },
-    refresh: function () {
-        var captchaImage = document.getElementById("captcha-image");
-        captchaImage.innerHTML = this.generateCode();
-    },
-    init: function () {
-        this.refresh();
-        var refreshButton = document.getElementById("refresh-captcha");
-        refreshButton.addEventListener("click", function () {
-            captcha.refresh();
-        });
-    }
-};
-captcha.init();
+const firstNameInput = document.getElementById("firstNameInput");
+const congratsText = document.querySelector("#congrats .title2");
+
+congratsText.textContent = congratsText.textContent.replace("_Prénom_", firstNameInput.value);
+
 
